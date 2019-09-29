@@ -47,7 +47,7 @@ public:
 	
 };
 
-class Menu : public  MenuChepter
+class Menu : protected  MenuChepter
 {
 	friend class Init;
 private:
