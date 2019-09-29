@@ -32,5 +32,8 @@ public:
 		MainMenu.AddMenuItem("MinMax", MinMax);
 	}
 
-	void Show_Main();
+	void Show_Main()
+	{
+		MainMenu.ShowMenu();
+	}
 };

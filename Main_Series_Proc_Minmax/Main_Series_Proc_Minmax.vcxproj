@@ -151,7 +151,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Initialization.cpp" />
     <ClCompile Include="Main_Series_Proc_Minmax.cpp" />
     <ClCompile Include="MinMax_Solve.cpp" />
     <ClCompile Include="OOP_Menu.cpp" />
