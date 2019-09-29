@@ -4,12 +4,13 @@
 #include "Proc_Solve.h"
 #include "Series_Solve.h"
 
-class Init
+class Init : protected MenuChepter
 {
 private:
-	Menu Series;
-	Menu Proc;
-	Menu MinMax;
+	MenuChepter Series;
+	MenuChepter Proc;
+	MenuChepter MinMax;
+	Menu MainMenu;
 public:
 
 	Init()
@@ -26,8 +27,10 @@ public:
 		MinMax.AddMenuItem("Задача- 14 з 30", MinMax14);
 		MinMax.AddMenuItem("Задача- 21 з 30", MinMax21);
 		MinMax.AddMenuItem("Задача- 30 з 30", MinMax30);
+		MainMenu.AddMenuItem("Series", Series);
+		MainMenu.AddMenuItem("Proc", Proc);
+		MainMenu.AddMenuItem("MinMax", MinMax);
 	}
-	void Show_Series();
-	void Show_Proc();
-	void Show_MinMax();
+
+	void Show_Main();
 };

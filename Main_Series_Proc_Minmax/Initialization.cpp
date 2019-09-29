@@ -1,16 +1,6 @@
 #include "Initialization.h"
 
-void Init::Show_Series()
+void Init::Show_Main()
 {
-	Series.ShowMenu();
-}
-
-void Init::Show_Proc()
-{
-	Proc.ShowMenu();
-}
-
-void Init::Show_MinMax()
-{
-	MinMax.ShowMenu();
+	MainMenu.ShowMenu();
 }

@@ -2,28 +2,63 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <conio.h>
+#include <Windows.h>
+
 
 using namespace std;
 
-class MenuItem
+class MenuChepterItem
 {
-public:
+	friend class MenuChepter;
+private:
 	string title;
 
 	void (*proc)() = 0;
 
-	MenuItem(string aTitle, void (*procLink)()) : title(aTitle), proc(procLink) {}
-	MenuItem() { title = ""; }
+	MenuChepterItem(string aTitle, void (*procLink)()) : title(aTitle), proc(procLink) {}
+
+	MenuChepterItem() { title = ""; }
 
 };
-
-class Menu : public MenuItem
+ 
+class MenuChepter : protected MenuChepterItem
 {
+	friend class Menu;
+	friend class Init;
+private :
+	void GetMenuView();
+
+	vector<MenuChepterItem> menuChepterItem;
+	string title_Chepter;
+
+	void ShowMenu();
+	void AddMenuItem(string itemTitle, void (*procLink)());
+public:
+	
+	MenuChepter(string title, vector<MenuChepterItem> menuChepterItem)
+	{
+		this->title_Chepter = title;
+		this->menuChepterItem = menuChepterItem;
+	}
+
+	MenuChepter() { title_Chepter = "Lol"; }
+
+	
+};
+
+class Menu : public  MenuChepter
+{
+	friend class Init;
 private:
 	string menuTitle;
-	vector<MenuItem> menuItems;
+	vector<MenuChepter> menuChepter;
 
 	void GetMenuView();
+
+	// Interface method
+	void AddMenuItem(string itemTitle, MenuChepter linkMenuChepter);
+	void ShowMenu();
 public:
 
 	// Constructors
@@ -36,8 +71,6 @@ public:
 		this->menuTitle = menuTitle;
 	}
 
-	// Interface method
-	void AddMenuItem(string itemTitle, void (*procLink)());
-	void ShowMenu();
+	
 };
 

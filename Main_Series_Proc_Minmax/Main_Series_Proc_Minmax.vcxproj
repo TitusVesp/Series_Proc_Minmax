@@ -153,7 +153,6 @@
   <ItemGroup>
     <ClCompile Include="Initialization.cpp" />
     <ClCompile Include="Main_Series_Proc_Minmax.cpp" />
-    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MinMax_Solve.cpp" />
     <ClCompile Include="OOP_Menu.cpp" />
     <ClCompile Include="Proc_Solve.cpp" />
@@ -161,7 +160,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Initialization.h" />
-    <ClInclude Include="Menu.h" />
     <ClInclude Include="MinMax_Solve.h" />
     <ClInclude Include="OOP_Menu.h" />
     <ClInclude Include="Proc_Solve.h" />
