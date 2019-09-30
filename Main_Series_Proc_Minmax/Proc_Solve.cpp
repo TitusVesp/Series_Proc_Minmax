@@ -2,7 +2,7 @@
 
 void SortDec3(int a, int b, int c, int count);
 bool IsPower5(int k);
-long Fib(long x1, long x2, long N);
+unsigned long long Fib(unsigned long long x1, unsigned long long x2, unsigned long long N);
 double Leng(int xa, int ya, int xb, int yb);
 
 void Proc13()
@@ -70,10 +70,10 @@ void Proc36()
 	cout << "Proc36. ќписать функцию Fib(N) целого типа, вычисл€ющую N-й элемент последовательности ‘ибоначи" << endl;
 
 	cout << "Imput N" << endl;
-	int n = 1;
+	unsigned long long n = 1;
 	cin >> n;
 
-	long res = Fib(0, 1, n - 1);
+	unsigned long long res = Fib(0, 1, n - 1);
 
 	cout << "Result: " << res << endl;
 }
@@ -113,10 +113,10 @@ bool IsPower5(int k)
 	return false;
 }
 
-long Fib(long x1, long x2, long N)
+unsigned long long Fib(unsigned long long x1, unsigned long long x2, unsigned long long N)
 {
 
-	int temp = 0;
+	unsigned long long temp = 1;
 
 	while (N != 0)
 	{
